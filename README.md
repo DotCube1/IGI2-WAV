@@ -31,5 +31,10 @@ if u dont want to compile just run the pre compiled program from the bin folder
 ![Screenshot (8)](https://github.com/DotCube1/IGI2-WAV/assets/66794499/f8e74f27-0b3e-4f4c-b29f-aacd90ae73a3)
 
 - You will be able to hear the sound now 
- <br> in my example i used these sounds alarm_2.wav, owl_01.wav, owl_02.wav 
- 
+ <br> in my example i used these sounds alarm_2.wav, owl_01.wav, owl_02.wav
+
+
+
+https://github.com/DotCube1/IGI2-WAV/assets/66794499/41fe668d-89d1-418d-8284-8617184af953
+
+
