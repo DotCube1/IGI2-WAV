@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Toolkit.Forms.UI.XamlHost</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2">
+            <summary>
+            Enables access to native methods on DesktopWindowXamlSourceNative version 2 for RS5
+            </summary>
+            <remarks>
+            Includes the method used to set the window handle of the <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> instance.
+            </remarks>
+        </member>
+        <member name="M:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.AttachToWindow(System.IntPtr)">
+            <summary>
+            Attaches the <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> to a window using a window handle.
+            </summary>
+            <param name="parentWnd">pointer to parent Wnd</param>
+            <remarks>
+            The associated window will be used to parent UWP XAML visuals, appearing
+            as UWP XAML's logical render target.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.WindowHandle">
+            <summary>
+            Gets the handle associated with the <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.PreTranslateMessage(System.Windows.Forms.Message@)">
+            <summary>
+            Sends the <paramref name="message"/> to the internal <see cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource" /> window handle.
+            </summary>
+            <returns>True if the <paramref name="message"/> was handled</returns>
+        </member>
+        <member name="T:Microsoft.Toolkit.Win32.UI.Controls.Interop.Win32.WM">
+            <summary>
+            Window message values, WM_*
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.NativeDefines">
+            <summary>
+            Definitions required for native interop
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.SafeNativeMethods">
+            <summary>
+            This class is for methods that are safe for anyone to call. Callers of these methods are not required to perform a full security review to make sure that the usage is secure because the methods are harmless for any caller.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.SafeNativeMethods.GetFocus">
+            <summary>
+            Retrieves the handle to the window that has the keyboard focus, if the window is attached
+            to the calling thread's message queue.
+            </summary>
+            <returns>Window handle of window that currently has focus</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.SafeNativeMethods.SetWindowPos(System.IntPtr,System.IntPtr,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Changes the size, position, and Z order of a child, pop-up, or top-level window.These windows are ordered according to their appearance on the screen. The topmost window receives the highest rank and is the first window in the Z order.
+            </summary>
+            <param name="hWnd">Handle to target window</param>
+            <param name="hWndInsertAfter">A handle to the window to precede the positioned window in the Z order.</param>
+            <param name="x">The new position of the left side of the window, in client coordinates.</param>
+            <param name="y">The new position of the top of the window, in client coordinates. </param>
+            <param name="cx">The new width of the window, in pixels. </param>
+            <param name="cy">The new height of the window, in pixels. </param>
+            <param name="flags">The window sizing and positioning flags. This parameter can be a combination of the following values. </param>
+            <returns>If the function succeeds, the return value is nonzero. Otherwise, call GLE.</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.SafeNativeMethods.GetDpiForWindow(System.IntPtr)">
+            <summary>
+            Retrieves the dpi value of a window.
+            </summary>
+            <param name="hWnd">Handle to target window</param>
+            <returns>The dpi value or 0 for an invalid window.</returns>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.SetWindowPosFlags">
+            <summary>
+            SetWindowPos Flags
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.UnsafeNativeMethods">
+            <summary>
+            This class is for methods that are potentially dangerous. Any caller of these methods must perform a full security review to make sure that the usage is secure because no stack walk will be performed.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.UnsafeNativeMethods.IntSetFocus(System.IntPtr)">
+            <summary>
+            This code returns a pointer to a native control with focus.
+            </summary>
+            <SecurityNote>
+             SecurityCritical: This code happens to return a critical resource and causes unmanaged code elevation
+            </SecurityNote>
+            <returns>handle</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.Interop.Win32.UnsafeNativeMethods.SetWindowLong(System.IntPtr,System.Int32,System.UInt32)">
+            <summary>
+            Changes an attribute of the specified window. The function also sets the 32-bit (long) value at the specified offset into the extra window memory.
+            </summary>
+            <param name="hWnd">Target window</param>
+            <param name="nIndex">Zero-based offset</param>
+            <param name="dwNewLong">The replacement value</param>
+            <returns>A positive integer indicates success; zero indicates failure</returns>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHost">
+            <summary>
+                A sample Windows Forms control that hosts XAML content
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHost.AutoSize">
+            <summary>
+            Gets or sets a value indicating whether the control dynamically sizes to its content
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHost.AutoSizeMode">
+            <summary>
+            Gets or sets the automatic size mode.
+            </summary>
+            <value>The automatic size mode.</value>
+            <remarks>A value indicating if the control dynamically sizes to its content.</remarks>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHost.InitialTypeName">
+            <summary>
+            Gets or sets XAML Content by type name
+            </summary>
+            <example><code>XamlClassLibrary.MyUserControl</code></example>
+            <remarks>
+            Content creation is deferred until after the parent hwnd has been created.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHost.Child">
+            <summary>
+            Gets or sets XAML content for XamlContentHost
+            </summary>
+            <value>The <see cref="T:Windows.UI.Xaml.UIElement"/>.</value>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHost.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Raises the <see cref="E:System.Windows.Forms.Control.HandleCreated" /> event.
+            </summary>
+            <param name="e">An <see cref="T:System.EventArgs" /> that contains the event data.</param>
+            <remarks>Assign window render target to UWP XAML content.</remarks>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase">
+            <summary>
+                WindowsXamlHostBase hosts UWP XAML content inside Windows Forms
+            </summary>
+            <summary>
+                WindowsXamlHostBase hosts UWP XAML content inside Windows Forms
+            </summary>
+            <summary>
+                WindowsXamlHostBase hosts UWP XAML content inside Windows Forms
+            </summary>
+            <summary>
+                WindowsXamlHostBase hosts UWP XAML content inside Windows Forms
+            </summary>
+            <summary>
+                WindowsXamlHostBase hosts UWP XAML content inside Windows Forms
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._metadataContainer">
+            <summary>
+            An instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.IXamlMetadataContainer"/>. Required to
+            probe at runtime for custom UWP XAML type information.
+            This must be implemented by the instance of <seealso cref="T:Windows.UI.Xaml.Application"/>
+            </summary>
+            <remarks>
+            <seealso cref="T:Windows.UI.Xaml.Application"/> object is required for loading custom control metadata.  If a custom
+            Application object is not provided by the application, the host control will create an instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication"/>.
+            Instantiation of the application object must occur before creating the DesktopWindowXamlSource instance.
+            If no Application object is created before DesktopWindowXamlSource is created, DestkopWindowXamlSource
+            will create an instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication"/> that implements <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.IXamlMetadataContainer"/>.
+            </remarks>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._xamlSource">
+            <summary>
+            DesktopWindowXamlSource instance
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.MetadataContainer">
+            <summary>
+            Gets the current instance of <seealso cref="T:Microsoft.Toolkit.Win32.UI.XamlHost.XamlApplication"/>
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._childInternal">
+            <summary>
+            Private field that backs ChildInternal property.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._lastXamlContentPreferredSize">
+            <summary>
+               Last preferredSize returned by UWP XAML during WinForms layout pass
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._xamlIslandWindowHandle">
+            <summary>
+               UWP XAML island window handle associated with this Control instance
+            </summary>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._lastDpi">
+            <summary>
+               The last dpi value retrieved from the system
+            </summary>
+        </member>
+        <member name="E:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.ChildChanged">
+            <summary>
+                Fired when XAML content has been updated
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase"/> class.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.GetUwpInternalObject">
+            <summary>
+            Exposes ChildInternal without exposing its actual Type.
+            </summary>
+            <returns>the underlying UWP child object</returns>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.ChildInternal">
+            <summary>
+               Gets or sets XAML content for XamlContentHost
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.SetContent(Windows.UI.Xaml.UIElement)">
+            <summary>
+            Sets the root UWP XAML element on DesktopWindowXamlSource
+            </summary>
+            <param name="newValue">A UWP XAML Framework element</param>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.DpiScalingRenderTransform">
+            <summary>
+            Gets or sets a value indicating whether a render transform is added to the UWP control corresponding to the current dpi scaling factor
+            if scaling is not supported natively by the XAML island
+            </summary>
+            <value>The dpi scaling mode.</value>
+            <remarks>A custom render transform added to the root UWP control will be overwritten.</remarks>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.Dispose(System.Boolean)">
+            <summary>
+            Clean up hosted UWP XAML content
+            </summary>
+            <param name="disposing">IsDisposing?</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnHandleCreated(System.EventArgs)">
+            <summary>
+            Raises the HandleCreated event.  Assign window render target to UWP XAML content.
+            </summary>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnHandleDestroyed(System.EventArgs)">
+            <summary>
+            Override that disposes the current instance when the parent handle has been destroyed
+            </summary>
+            <param name="e">Ignored</param>
+        </member>
+        <member name="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._lastFocusRequest">
+            <summary>
+            Last Focus Request GUID to uniquely identify Focus operations, primarily used with error callbacks
+            </summary>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.Focused">
+            <summary>
+                Gets a value indicating whether this Control currently has focus. Check both the Control's
+                window handle and the hosted Xaml window handle. If either has focus
+                then this Control currently has focus.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.Select(System.Boolean,System.Boolean)">
+            <summary>
+                Activates the Windows Forms WindowsXamlHost Control
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.ProcessTabKey(System.Boolean)">
+            <summary>
+                Processes a tab key, ensuring that Xaml has an opportunity
+                to handle the command before normal Windows Forms processing.
+                (Xaml must be notified of keys that invoke focus navigation.)
+            </summary>
+            <returns>true if the command was processed</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.PreProcessMessage(System.Windows.Forms.Message@)">
+            <summary>
+            In order to handle keyboard accelerators and TAB input, we must give a chance to <seealso cref="T:Windows.UI.Xaml.Hosting.DesktopWindowXamlSource"/>
+            to handle the <paramref name="msg"/> using <seealso cref="M:Microsoft.Toolkit.Win32.UI.XamlHost.IDesktopWindowXamlSourceNative2.PreTranslateMessage(System.Windows.Forms.Message@)"/>
+            </summary>
+            <param name="msg">The current incomming message in the queue</param>
+            <returns>True if <seealso cref="F:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase._xamlSource"/> was able to handle the <paramref name="msg"/></returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnTakeFocusRequested(Windows.UI.Xaml.Hosting.DesktopWindowXamlSource,Windows.UI.Xaml.Hosting.DesktopWindowXamlSourceTakeFocusRequestedEventArgs)">
+            <summary>
+            Responds to DesktopWindowsXamlSource TakeFocusRequested event
+            </summary>
+            <param name="sender">DesktopWindowsXamlSource</param>
+            <param name="args">DesktopWindowXamlSourceTakeFocusRequestedEventArgs</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.GetPreferredSize(System.Drawing.Size)">
+            <summary>
+                Overrides the base class implementation of <see cref="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.GetPreferredSize(System.Drawing.Size)" /> to provide
+                correct layout behavior for the hosted XAML content.
+            </summary>
+            <returns>preferred size</returns>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.UpdateDpiScalingFactor">
+            <summary>
+                Sets a scaling factor based on the current dpi value on the scaling panel
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.GetRootXamlElementDesiredSize">
+            <summary>
+                Gets XAML content's 'DesiredSize' post-Measure.
+            </summary>
+            <returns>desired size</returns>
+            <remarks>Called by <see cref="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnChildSizeChanged(System.Object,System.Object)" /> event handler.
+            </remarks>
+        </member>
+        <member name="P:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.DefaultSize">
+            <summary>
+                Gets the default size of the control.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnChildSizeChanged(System.Object,System.Object)">
+            <summary>
+                Responds to UWP XAML's 'SizeChanged' event, fired when XAML content
+                layout has changed.  If 'DesiredSize' has changed, re-run
+                Windows Forms layout.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnWindowXamlHostSizeChanged(System.Object,System.EventArgs)">
+            <summary>
+                Event handler for <see cref="E:System.Windows.Forms.Control.SizeChanged" />. If the size of the host control
+                has changed, re-run Windows Forms layout on this Control instance.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.SetDesktopWindowXamlSourceWindowPos">
+            <summary>
+               Sets XAML window size using dimensions of the host control
+            </summary>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Draw a placeholder Rectangle with 'Xaml Content' in Design mode
+            </summary>
+            <param name="e">PaintEventArgs</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.OnPaintBackground(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Prevent control from painting the background
+            </summary>
+            <param name="pevent">PaintEventArgs</param>
+        </member>
+        <member name="M:Microsoft.Toolkit.Forms.UI.XamlHost.WindowsXamlHostBase.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages for XamlContentHost control window (not XAML window)
+            </summary>
+            <param name="m">message to process</param>
+        </member>
+        <member name="T:Microsoft.Toolkit.Forms.UI.XamlHost.WrapperLookup">
+            <summary>
+            WrapperLookup is a set of extension methods to extend <see cref="T:Windows.UI.Xaml.UIElement"/> to make it relatively easy
+            to find its associated WindowsXamlHostBaseExt.
+            (WPF Interop uses an attached DependencyProperty for this).
+            </summary>
+        </member>
+    </members>
+</doc>
