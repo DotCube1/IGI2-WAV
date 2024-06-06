@@ -22,12 +22,14 @@ if u dont want to compile just run the pre compiled program from the bin folder
 
 # Usage
 
-- Run the program 
+- Run the program
+ 
 ![Screenshot (7)](https://github.com/DotCube1/IGI2-WAV/assets/66794499/8155a4e2-dd40-4e66-9c81-74d4e866ea2f)
 
 - Click open and select the IGI 2 wav
+ 
 ![Screenshot (8)](https://github.com/DotCube1/IGI2-WAV/assets/66794499/f8e74f27-0b3e-4f4c-b29f-aacd90ae73a3)
 
 - You will be able to hear the sound now 
- in my example i used these sounds alarm_2.wav, owl_01.wav, owl_02.wav 
+ <br> in my example i used these sounds alarm_2.wav, owl_01.wav, owl_02.wav 
  
