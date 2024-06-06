@@ -4,14 +4,14 @@ IGI2 WAV is a project which will decode the .wav audio file format of the IGI 2 
 
 # About the File Format
 
-- This is not the normal .WAV file which can be played in windows media player.
-- These .WAV files used in IGI 2 are encoded using ILFF (Inner Loop File Format) method.
-- These Have four different sound pack methods.
+<br> This is not the normal .WAV file which can be played in windows media player.
+<br> These .WAV files used in IGI 2 are encoded using ILFF (Inner Loop File Format) method.
+<br> These Have four different sound pack methods.
 
-  RAW - not packed
-  RAW_RESIDENT - looks like not packed.
-  ADPCM - packed.
-  ADPCM_RESIDENT - packed.
+  - RAW - not packed
+  - RAW_RESIDENT - looks like not packed.
+  - ADPCM - packed.
+  - ADPCM_RESIDENT - packed.
 
 
 # How To Use
