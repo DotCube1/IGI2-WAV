@@ -4,9 +4,6 @@ IGI2 WAV is a project which will decode the .wav audio file format of the IGI 2 
 
 # How To Use
 
-download this project
-Compile the solution file using visual studio 
-an exe will be there in bin folder
-run the program
+Download this project then compile the solution file using visual studio and run the program from bin folder
 
 if u dont want to compile just run the pre compiled program from the bin folder
