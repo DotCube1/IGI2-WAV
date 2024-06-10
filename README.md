@@ -42,3 +42,7 @@ if u dont want to compile just run the pre compiled program from the bin folder
 https://github.com/DotCube1/IGI2-WAV/assets/66794499/41fe668d-89d1-418d-8284-8617184af953
 
 
+# Future Updates 
+In near future i will add the function of exporting as normal audio file which can be played by any media player. 
+
+
